@@ -1,4 +1,5 @@
 @define-color bg_dim      #232A2E;
+@define-color black       #000000;
 @define-color bg0         #2D353B;
 @define-color bg1         #343F44;
 @define-color bg2         #3D484D;
@@ -25,7 +26,7 @@
     border: 1px solid transparent;
     border-radius: 0px;
     margin: 0px 1px;
-    /* `otf-font-awesome` is required to be installed for icons */
+     /*`otf-font-awesome` is required to be installed for icons */
     /*font-family: "Source Sans Pro", "Font Awesome 6 Free";*/
     font-size: 14px;
     min-height: 0px;
@@ -52,10 +53,18 @@ window#waybar {
     margin-right: 5px;
 }
 
+#custom-arch{
+  background-color:@bg;
+  color:@red;
+}
+
+#custom-swaync{
+  color:@yellow;
+}
 #workspaces button {
     padding: 0px 5px;
-    background-color: @bg0;
-    color: @fg;
+    background-color: @orange;
+    color: @black;
 }
 
 #workspaces button:hover {
@@ -154,8 +163,8 @@ window#waybar.empty #window {
     border-radius: 5px 0px 0px 5px;	
     padding: 0px 5px;
     margin-left: 5px;
-    background-color: @blue;
-    color: @bg_yellow;
+    background-color: @red;
+    color: @black;
 }
 
 #pulseaudio {
@@ -182,8 +191,8 @@ window#waybar.empty #window {
     padding: 0px 5px;
     border-radius: 5px;	
     margin-left: 5px;
-    background-color: @bg0;
-    color: @fg;
+    background-color: @blue;
+    color: @black;
 }
 #idle_inhibitor.activated {
     background-color: @fg;
@@ -194,6 +203,7 @@ window#waybar.empty #window {
     padding: 0px 5px;
     border-radius: 5px;	
     margin: 0px 5px;
-    background-color: @bg0;
+    color:@bg_yellow;
+    background-color: @aqua;
 }
 
