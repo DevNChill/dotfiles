@@ -1,5 +1,6 @@
 @define-color bg_dim      #232A2E;
 @define-color black       #000000;
+@define-color white       #FFFFFF;
 @define-color bg0         #2D353B;
 @define-color bg1         #343F44;
 @define-color bg2         #3D484D;
@@ -68,7 +69,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background-color: @bg2;
+    background-color: @purple;
+    color:@white;
 }
 
 #workspaces button.focused {

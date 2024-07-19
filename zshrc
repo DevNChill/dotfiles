@@ -2,7 +2,7 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=( 
     git
@@ -41,3 +41,4 @@ bindkey -M viins 'jk' vi-cmd-mode-custom
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 fastfetch
+source ~/.config/powerlevel10k/p10k-robbyrussell.zsh
