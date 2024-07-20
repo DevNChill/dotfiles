@@ -151,16 +151,16 @@
 		"class<Chromium>": "<span font='12'> </span>",
 		"class<org.telegram.desktop|io.github.tdesktop_x64.TDeskto>": "<span font='12'> </span>",
 		"class<[Ss]potify>": "<span font='12'> </span>",
-		"class<VSCode|code-url-handler>": "󰨞",
+		"class<VSCode|code-url-handler>": "<span font='12'>󰨞</span>",
 		"class<konsole>": " ",
 		"class<thunar>": "󰝰 ",
-		"class<discord>": " ",
+		"class<discord>": "<span font='12'>  </span>",
 		"class<WebCord>": " ",
 		"class<subl>": "󰅳 ",
 		"class<celluloid>": " ",
 		"class<Cider>": "󰎆 ",
 		"class<code-oss>": "󰨞 ",
-		"class<codium|codium-url-handler|VSCodium>": "<span font='12'>󰨞 </span> ",
+		"class<codium|codium-url-handler|VSCodium>": "<span font='12'>󰨞</span> ",
 		"class<codeblocks>": "󰅩 ",
 		"class<mousepad>": " ",
 		"class<libreoffice-writer>": " ",
@@ -296,7 +296,7 @@
 		"warning": 30,
 		"critical": 15
 	},
-	"format": "Battery   {icon}   {capacity}%",
+	"format": "Battery {icon}  {capacity}%",
 	"format-charging": "Battery  {capacity}%",
 	"format-plugged": "Battery 󱘖 {capacity}%",
 	"format-alt-click": "click",
@@ -372,7 +372,7 @@
 	"format-alt": "{:%A, %d %B, %Y (%R)}"
 },
 "cpu": {
-	"format": "Cpu    {usage}%    󰍛",
+	"format": "Cpu  󰍛  {usage}%",
 	"interval": 1,
 	"min-length": 5,
 	"format-alt-click": "click",
@@ -387,7 +387,7 @@
 	//"format": "Disk    󰋊",
 	"path": "/",
 	//"format-alt-click": "click",
-	"format": "Disk    {used}    󰋊",
+	"format": "Disk 󰋊  {used}",
 //	"tooltip": true,
 //	"tooltip-format": "Disk    {used} used out of {total} on {path} ({percentage_used}%)",
 },
@@ -436,7 +436,7 @@
 },
 "memory": {
 	"interval": 10,
-	"format": "Ram    {used:0.1f}G    󰾆",
+	"format": "Ram  󰾆  {used:0.1f}G",
 	"format-alt": "Ram    {percentage}%    󰾆",
 	"format-alt-click": "click",
 	"tooltip": true,
@@ -581,10 +581,10 @@
 	],
 	//"thermal-zone": 0,
 	"critical-threshold": 82,
-	"format-critical": "Temp    {temperatureC}°C {icon}",
-	"format": "Temp    {temperatureC}°C {icon}",
+	"format-critical": "Temp {icon}  {temperatureC}°C",
+	"format": "Temp {icon}  {temperatureC}°C",
 	"format-icons": [
-		"    󰈸"
+		" 󰈸"
 	],
 	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
 },

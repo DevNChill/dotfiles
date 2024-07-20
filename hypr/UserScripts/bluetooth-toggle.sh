@@ -5,8 +5,9 @@ BT_STATUS=$(bluetoothctl show | grep "Powered:" | awk '{print $2}')
 
 if [ "$BT_STATUS" == "yes" ]; then
 	# Turn off Bluetooth
-	bluetoothctl power off
-	notify-send "Bluetooth is OFF now "
+	# bluetoothctl power off
+	# notify-send "Bluetooth is OFF now "
+  blueman-manager
 else
 	# Turn on Bluetooth
 	bluetoothctl power on
