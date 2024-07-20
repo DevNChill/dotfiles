@@ -1,0 +1,15 @@
+[general]
+autosens = 1
+bar_width = 4
+bar_spacing = 3
+
+[input]
+method = pulse
+source = auto
+
+[smoothing]
+gravity = 855
+
+[color]
+background = default
+foreground = '#A7C080'

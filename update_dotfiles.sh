@@ -11,6 +11,7 @@ DOTFILES_DIR="$HOME/Github/mydotfiles"
 
 # Ensure all directories exist in the dotfiles repo
 mkdir -p "$DOTFILES_DIR/fastfetch"
+mkdir -p "$DOTFILES_DIR/cava"
 mkdir -p "$DOTFILES_DIR/hypr"
 mkdir -p "$DOTFILES_DIR/kitty"
 mkdir -p "$DOTFILES_DIR/nvim"
@@ -21,6 +22,7 @@ mkdir -p "$DOTFILES_DIR/waybar"
 
 # Sync changes using rsync
 rsync -av --delete --exclude '.git' "$HOME/.config/fastfetch/" "$DOTFILES_DIR/fastfetch/"
+rsync -av --delete --exclude '.git' "$HOME/.config/cava/" "$DOTFILES_DIR/cava/"
 rsync -av --delete --exclude '.git' "$HOME/.config/hypr/" "$DOTFILES_DIR/hypr/"
 rsync -av --delete --exclude '.git' "$HOME/.config/kitty/" "$DOTFILES_DIR/kitty/"
 rsync -av --delete --exclude '.git' "$HOME/.config/nvim/" "$DOTFILES_DIR/nvim/"
