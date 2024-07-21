@@ -42,3 +42,5 @@ bindkey -M viins 'jk' vi-cmd-mode-custom
 source <(fzf --zsh)
 fastfetch
 source ~/.config/powerlevel10k/p10k-robbyrussell.zsh
+
+export PATH=$PATH:/home/mid3ee/.spicetify

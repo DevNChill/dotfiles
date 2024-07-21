@@ -21,7 +21,7 @@
 	"custom/separator#blank_2", 
 	"hyprland/workspaces#rw",
 	"custom/separator#blank_2",
-	"mpris",
+//	"mpris",
 	"custom/swaync",
 	"tray",
 	],

@@ -388,6 +388,7 @@
 	"path": "/",
 	//"format-alt-click": "click",
 	"format": "Disk 󰋊  {used}",
+  "on-click-right": "baobab",
 //	"tooltip": true,
 //	"tooltip-format": "Disk    {used} used out of {total} on {path} ({percentage_used}%)",
 },
