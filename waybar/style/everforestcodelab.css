@@ -37,6 +37,7 @@
 
 window#waybar {
     border: none;
+    /*background-color: @bg_green;*/
     background-color: @bg_green;
     color: @fg;
     transition-property: background-color;
@@ -70,13 +71,13 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: @purple;
+    background-color: @grey0;
     color:@black;
     animation: gradient_f 20s ease-in infinite;
     /*transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);*/
 }
 #workspaces button:hover {
-    background-color: @bg3;
+    background-color: @purple;
     color:@white;
 }
 

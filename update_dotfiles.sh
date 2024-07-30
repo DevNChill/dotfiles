@@ -7,7 +7,7 @@ set -e
 set -x
 
 # Paths
-DOTFILES_DIR="$HOME/Github/mydotfiles"
+DOTFILES_DIR="$HOME/Github/dotfiles"
 
 # Ensure all directories exist in the dotfiles repo
 mkdir -p "$DOTFILES_DIR/fastfetch"

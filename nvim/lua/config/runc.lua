@@ -1,4 +1,3 @@
-
 -- Function to compile and run the current C file using ToggleTerm
 function RunCProgram()
     -- Save the current file
@@ -28,7 +27,8 @@ function RunCProgram()
         .. (readline_used and " -lreadline" or "")  -- Include -lreadline if readline is used
         .. " -lm && clear && ./"
         .. vim.fn.fnamemodify(current_file, ":t")
-    local cmd = "cd " .. current_dir .. " && " .. compile_cmd .. "; exec $SHELL"
+    local cmd = "cd " .. current_dir .. " && ZDOTDIR=~/.zshrc_toggleterm zsh -c '"
+        .. compile_cmd .. "; exec $SHELL'"
 
     -- Use ToggleTerm to open a terminal and send the command
     local Terminal = require("toggleterm.terminal").Terminal
@@ -45,3 +45,4 @@ end
 
 -- Map the function to <Leader>r
 vim.api.nvim_set_keymap("n", "<Leader>rcc", ":lua RunCProgram()<CR>", { noremap = true, silent = true })
+
