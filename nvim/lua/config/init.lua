@@ -46,5 +46,5 @@ local opts = {
 require("lazy").setup(plugins, opts)
 
 -- Set the default colorscheme
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme catppuccin")
 
