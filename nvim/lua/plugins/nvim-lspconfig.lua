@@ -83,8 +83,10 @@ local config = function()
 	local hadolint = require("efmls-configs.linters.hadolint")
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
-	local clangformat = require("efmls-configs.formatters.clang_format")
-
+  local clangformat = {
+    formatCommand = "clang-format -style=GNU",
+    formatStdin = true,
+}
 	-- configure efm server
 	lspconfig.efm.setup({
 		filetypes = {
