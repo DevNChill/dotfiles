@@ -1,6 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
-	lazy = false,
+   lazy = true,
+    cmd = { "HarpoonMark", "HarpoonToggleQuickMenu" },
 	config = function()
 		require("harpoon").setup({
 			-- Your Harpoon configuration here

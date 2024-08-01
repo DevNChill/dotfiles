@@ -1,7 +1,8 @@
 local plugins = {
 	{
 		"rcarriga/nvim-dap-ui",
-		lazy = false,
+		lazy = true,
+    cmd = { "DapContinue", "DapToggleBreakpoint", "DapStepOver", "DapStepInto", "DapStepOut", "DapTerminate", "DapREPL" },
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")

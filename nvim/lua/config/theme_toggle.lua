@@ -1,8 +1,6 @@
 -- Define the available themes and their corresponding configurations
 local themes = {
-  { name = "tokyonight", config = nil },
-  { name = "everforest", config = nil },
-  { name = "midnight", config = nil },
+  { name = "catppuccin", config = nil },
 }
 local current_theme_index = 1
 

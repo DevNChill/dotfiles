@@ -21,7 +21,7 @@ end
 
 return {
   "nvim-lualine/lualine.nvim",
-  lazy = false,
+  event="BufReadPost",
   config = config,
 }
 
