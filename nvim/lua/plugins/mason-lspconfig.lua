@@ -1,5 +1,10 @@
 local opts = {
   ensure_installed = {
+    "html",
+    "tsserver",
+    "cssls",
+    "tailwindcss",
+    "svelte",
     "efm",
     "bashls",
     "solidity",
