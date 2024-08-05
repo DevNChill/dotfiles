@@ -19,11 +19,13 @@ mkdir -p "$DOTFILES_DIR/oh-my-zsh"
 mkdir -p "$DOTFILES_DIR/spicetify"
 mkdir -p "$DOTFILES_DIR/tmux"
 mkdir -p "$DOTFILES_DIR/waybar"
+mkdir -p "$DOTFILES_DIR/swaync"
 
 # Sync changes using rsync
 rsync -av --delete --exclude '.git' "$HOME/.config/fastfetch/" "$DOTFILES_DIR/fastfetch/"
 rsync -av --delete --exclude '.git' "$HOME/.config/cava/" "$DOTFILES_DIR/cava/"
 rsync -av --delete --exclude '.git' "$HOME/.config/hypr/" "$DOTFILES_DIR/hypr/"
+rsync -av --delete --exclude '.git' "$HOME/.config/swaync/" "$DOTFILES_DIR/swaync/"
 rsync -av --delete --exclude '.git' "$HOME/.config/kitty/" "$DOTFILES_DIR/kitty/"
 rsync -av --delete --exclude '.git' "$HOME/.config/nvim/" "$DOTFILES_DIR/nvim/"
 rsync -av --delete --exclude '.git' "$HOME/.config/waybar/" "$DOTFILES_DIR/waybar/"

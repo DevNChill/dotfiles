@@ -2,6 +2,7 @@
 alias fastfetch='fastfetch --logo-color-1 blue'
 alias kill="tmux kill-server"
 alias cc='clear'
+alias live='live-server'
 alias vim='nvim'
 alias .pat='echo  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'
 alias gcc_run='gcc_run_func() { gcc -o "${1%.*}" "$1" && ./"${1%.*}"; }; gcc_run_func'
