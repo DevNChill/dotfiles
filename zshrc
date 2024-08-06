@@ -29,7 +29,7 @@ export PATH="$PATH:/home/mid3ee/.local/bin"
 #for npm
 export PATH="$PATH:/home/mid3ee/.npm-global/bin"
 #My Custom Bin
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 # Ensure vi mode is enabled
 bindkey -v
 
@@ -48,3 +48,7 @@ bindkey -M viins 'jk' vi-cmd-mode-custom
 source <(fzf --zsh)
 
 export PATH=$PATH:/home/mid3ee/.spicetify
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

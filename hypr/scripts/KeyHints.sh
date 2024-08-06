@@ -1,4 +1,5 @@
 #!/bin/bash
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Keyhints. Idea got from Garuda Hyprland
 
 # Detect monitor resolution and scale

@@ -13,15 +13,6 @@ return {
 			require("luasnip.loaders.from_snipmate").lazy_load()
 			-- Load snippets from VSCode-like sources
 			require("luasnip.loaders.from_vscode").lazy_load()
-
-			-- Optionally, you can manually define your own snippets in Lua like this:
-			-- luasnip.add_snippets('c', {
-			--     luasnip.snippet('main', {
-			--         luasnip.text_node('#include <stdio.h>\n\nint main(int argc, char *argv[]) {\n\t'),
-			--         luasnip.insert_node(1, '/* code */'),
-			--         luasnip.text_node('\n\treturn 0;\n}')
-			--     })
-			-- })
 		end,
 	},
 	{
@@ -47,10 +38,10 @@ return {
 					["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 					["<C-e>"] = cmp.mapping.abort(), -- close completion window
 					["<CR>"] = cmp.mapping.confirm({ select = false }),
-					["<Tab>"] = cmp.mapping(function(fallback)
-						if cmp.visible() then
-							cmp.select_next_item()
-						elseif luasnip.expand_or_jumpable() then
+					["<C-l>"] = cmp.mapping(function(fallback)
+						-- if cmp.visible() then
+						-- 	cmp.select_next_item()
+						if luasnip.expand_or_jumpable() then
 							luasnip.expand_or_jump()
 						else
 							fallback()
