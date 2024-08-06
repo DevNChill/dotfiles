@@ -90,10 +90,34 @@ local config = function()
 			},
 		},
 	})
-
+	-- CSS
+	lspconfig.cssls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		settings = {
+			css = {
+				validate = true,
+				lint = {
+					unknownAtRules = "ignore",
+				},
+			},
+			scss = {
+				validate = true,
+				lint = {
+					unknownAtRules = "ignore",
+				},
+			},
+			less = {
+				validate = true,
+				lint = {
+					unknownAtRules = "ignore",
+				},
+			},
+		},
+	})
 	-- Configure efm server
 	local htmlhint = {
-		lintCommand = "htmlhint -c /dev/null",
+		lintCommand = "htmlhint",
 		lintStdin = true,
 		lintFormats = { "%f:%l:%c: %m" },
 	}
