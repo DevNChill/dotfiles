@@ -12,6 +12,13 @@ tmux new-window -n live_edit
 # Run live-server in the first pane
 tmux send-keys -t live_edit "cd $(pwd) && live-server" C-m
 
-# Split the window horizontally and run nvim in the second pane
-tmux split-window -h "cd $(pwd) && nvim ."
+# Split the window horizontally
+tmux split-window -h
+
+# Run nvim in the second pane, and keep the shell interactive after nvim exits
+tmux send-keys "cd $(pwd) && nvim .; exec $SHELL" C-m
+
+# Zoom into the nvim pane
+tmux select-pane -t 1
+tmux resize-pane -Z
 

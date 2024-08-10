@@ -29,7 +29,7 @@ export PATH="$PATH:/home/mid3ee/.local/bin"
 #for npm
 export PATH="$PATH:/home/mid3ee/.npm-global/bin"
 #My Custom Bin
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 # Ensure vi mode is enabled
 bindkey -v
 
