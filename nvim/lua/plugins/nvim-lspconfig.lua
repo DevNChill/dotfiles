@@ -90,6 +90,7 @@ local config = function()
 			},
 		},
 	})
+
 	-- CSS
 	lspconfig.cssls.setup({
 		capabilities = capabilities,
@@ -115,6 +116,20 @@ local config = function()
 			},
 		},
 	})
+
+	-- JavaScript
+	lspconfig.tsserver.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		settings = {
+			javascript = {
+				format = {
+					enable = true,
+				},
+			},
+		},
+	})
+
 	-- Configure efm server
 	local htmlhint = {
 		lintCommand = "htmlhint",
@@ -142,13 +157,11 @@ local config = function()
 	local hadolint = require("efmls-configs.linters.hadolint")
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
-	local clangformat = {
-		formatCommand = "clang-format -style=GNU",
-		formatStdin = true,
-	}
+
 	lspconfig.efm.setup({
 		filetypes = {
 			"lua",
+			"py",
 			"json",
 			"jsonc",
 			"sh",
@@ -163,6 +176,10 @@ local config = function()
 			"css",
 			"c",
 			"cpp",
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -188,10 +205,10 @@ local config = function()
 				markdown = { prettier },
 				docker = { hadolint, prettier },
 				solidity = { solhint },
-				html = { htmlhint, stylelint, prettier },
+				html = { htmlhint, prettier },
 				css = { stylelint, prettier },
-				c = { clangformat, cpplint },
-				cpp = { clangformat, cpplint },
+				c = { cpplint },
+				cpp = { cpplint },
 			},
 		},
 	})
@@ -210,3 +227,4 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 }
+
