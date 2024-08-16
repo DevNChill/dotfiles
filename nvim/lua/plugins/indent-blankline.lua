@@ -2,7 +2,8 @@ return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
 	lazy = false,
-  config=function ()
-  end,
+	config = function()
+		require("ibl").setup()
+	end,
 	opts = {},
 }
