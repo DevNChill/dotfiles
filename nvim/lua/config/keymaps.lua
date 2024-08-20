@@ -9,7 +9,8 @@ vim.api.nvim_set_keymap("n", "<C-u>", "8k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "8j", { noremap = true, silent = true })
 
 -- Saving and exiting the file
-mapkey("<leader>w", ":wq<CR>", "n")
+mapkey("<leader>wr", ":w<CR>", "n")
+mapkey("<leader>wq", ":wq<CR>", "n")
 mapkey("<leader>q", ":q<CR>", "n")
 mapkey("<leader>Q", ":q!<CR>", "n")
 

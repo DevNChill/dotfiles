@@ -1,4 +1,5 @@
 #!/bin/bash
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Scripts for refreshing ags waybar, rofi, swaync, wallust
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
@@ -25,7 +26,7 @@ done
 ags -q
 
 sleep 0.3
-# Relaunch waybar
+#Restart waybar
 waybar &
 
 # relaunch swaync
