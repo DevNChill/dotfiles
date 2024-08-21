@@ -46,8 +46,11 @@ cd "$DOTFILES_DIR"
 # Add changes to Git (including deletions)
 git add --all
 
-# Commit the changes with a message
-git commit -m "Updated dotfiles"
+# Prompt for a commit message
+read -p "Enter commit message: " commit_message
+
+# Commit the changes with the provided message
+git commit -m "$commit_message"
 
 # Push the changes
 git push origin main
