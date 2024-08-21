@@ -78,7 +78,7 @@ window#waybar {
 }
 #workspaces button:hover {
     background-color: @purple;
-    color:@white;
+    color:@black;
 }
 
 #workspaces button.focused {
