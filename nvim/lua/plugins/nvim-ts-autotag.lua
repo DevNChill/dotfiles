@@ -4,7 +4,7 @@ end
 
 return {
 	"windwp/nvim-ts-autotag",
-	lazy = false,
+  event = 'BufEnter',
 	ft = {
 		"html",               -- Standard HTML files
 		"javascript",         -- JavaScript files
