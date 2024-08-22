@@ -23,31 +23,34 @@ mapkey("<leader>bd", "bd", "n") -- Close current buffer
 
 -- Define the functions globally
 _G.delete_left_buffers = function()
-  local cur_buf = vim.api.nvim_get_current_buf()
-  local buffers = vim.api.nvim_list_bufs()
-  for _, buf in ipairs(buffers) do
-    if buf < cur_buf and vim.api.nvim_buf_is_loaded(buf) then
-      vim.api.nvim_buf_delete(buf, { force = true })
-    end
-  end
+	local cur_buf = vim.api.nvim_get_current_buf()
+	local buffers = vim.api.nvim_list_bufs()
+	for _, buf in ipairs(buffers) do
+		if buf < cur_buf and vim.api.nvim_buf_is_loaded(buf) then
+			vim.api.nvim_buf_delete(buf, { force = true })
+		end
+	end
 end
 
 _G.delete_right_buffers = function()
-  local cur_buf = vim.api.nvim_get_current_buf()
-  local buffers = vim.api.nvim_list_bufs()
-  for _, buf in ipairs(buffers) do
-    if buf > cur_buf and vim.api.nvim_buf_is_loaded(buf) then
-      vim.api.nvim_buf_delete(buf, { force = true })
-    end
-  end
+	local cur_buf = vim.api.nvim_get_current_buf()
+	local buffers = vim.api.nvim_list_bufs()
+	for _, buf in ipairs(buffers) do
+		if buf > cur_buf and vim.api.nvim_buf_is_loaded(buf) then
+			vim.api.nvim_buf_delete(buf, { force = true })
+		end
+	end
 end
 
 -- Map keys to the custom buffer deletion functions
-mapkey('<leader>bl', ':lua delete_left_buffers()<CR>',"n")
-mapkey('<leader>br', ':lua delete_right_buffers()<CR>',"n")
+mapkey("<leader>bl", ":lua delete_left_buffers()<CR>", "n")
+mapkey("<leader>br", ":lua delete_right_buffers()<CR>", "n")
 
 -- Directory Navigation
-mapkey("<leader>m", "NvimTreeToggle", "n")
+mapkey("<leader>mf", "NvimTreeToggle", "n")
+mapkey("<leader>me", "NvimTreeFindFileToggle", "n")
+mapkey("<leader>mc", "NvimTreeCollapse", "n")
+mapkey("<leader>mr", "NvimTreeRefresh", "n")
 
 -- debugging
 vim.api.nvim_set_keymap(

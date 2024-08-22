@@ -1,55 +1,99 @@
 local config = function()
-	require("nvim-treesitter.configs").setup({
-		build = ":TSUpdate",
-		indent = {
-			enable = true,
-		},
-		-- autotag = {
-		-- 	enable = true,
-		-- },
-		event = {
-			"BufReadPre",
-			"BufNewFile",
-		},
-		ensure_installed = {
-			"rust",
-			"markdown",
-			"json",
-			"javascript",
-			"typescript",
-			"yaml",
-			"html",
-			"css",
-			"markdown",
-			"bash",
-			"lua",
-			"dockerfile",
-			"solidity",
-			"gitignore",
-			"python",
-			"vue",
-			"svelte",
-			"toml",
-		},
-		auto_install = true,
-		highlight = {
-			enable = true,
-			additional_vim_regex_highlighting = true,
-		},
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = "<C-s>",
-				node_incremental = "<C-s>",
-				scope_incremental = false,
-				node_decremental = "<BS>",
-			},
-		},
-	})
+    local telescope = require("telescope")
+    telescope.setup({
+        defaults = {
+            mappings = {
+                i = {
+                    ["<C-j>"] = "move_selection_next",
+                    ["<C-k>"] = "move_selection_previous",
+                },
+            },
+            file_ignore_patterns = {
+                ".config/BraveSoftware",
+                "node_modules",
+                ".icons",
+                ".cargo",
+                ".mozilla",
+                ".venv",
+                ".cache",
+                ".local",
+                ".zshrc",
+                ".config/yay",
+                ".npm",
+                ".git",
+                ".svn",
+                "__pycache__",
+                "*.pyc",
+                "*.pyo",
+                "*.pyd",
+            },
+        },
+        pickers = {
+            live_grep = {
+                file_ignore_patterns = {
+                    ".config/BraveSoftware",
+                    "node_modules",
+                    ".icons",
+                    ".cargo",
+                    ".mozilla",
+                    ".venv",
+                    ".cache",
+                    ".local",
+                    ".zshrc",
+                    ".config/yay",
+                    ".npm",
+                    ".git",
+                    ".svn",
+                    "__pycache__",
+                    "*.pyc",
+                    "*.pyo",
+                    "*.pyd",
+                },
+                additional_args = function(_)
+                    return { "--hidden", "--no-ignore-vcs" }
+                end,
+                cwd = "~",
+                hidden = true,
+                no_ignore = true,
+            },
+            find_files = {
+                file_ignore_patterns = {
+                    ".config/BraveSoftware",
+                    "node_modules",
+                    ".icons",
+                    ".cargo",
+                    ".mozilla",
+                    ".venv",
+                    ".cache",
+                    ".local",
+                    ".zshrc",
+                    ".config/yay",
+                    ".npm",
+                    ".git",
+                    ".svn",
+                    "__pycache__",
+                    "*.pyc",
+                    "*.pyo",
+                    "*.pyd",
+                },
+                additional_args = function(_)
+                    return { "--hidden", "--no-ignore-vcs" }
+                end,
+                no_ignore = true,
+                hidden = true,
+                cwd = "~",
+                sorting_strategy = "ascending",
+            },
+        },
+        extensions = {
+            "fzf",
+        },
+    })
+    telescope.load_extension("fzf")
 end
-
 return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,
 	config = config,
 }
+
