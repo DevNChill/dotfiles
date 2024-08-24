@@ -47,7 +47,6 @@ mapkey("<leader>bl", ":lua delete_left_buffers()<CR>", "n")
 mapkey("<leader>br", ":lua delete_right_buffers()<CR>", "n")
 
 -- Directory Navigation
-mapkey("<leader>mf", "NvimTreeToggle", "n")
 mapkey("<leader>me", "NvimTreeFindFileToggle", "n")
 mapkey("<leader>mc", "NvimTreeCollapse", "n")
 mapkey("<leader>mr", "NvimTreeRefresh", "n")

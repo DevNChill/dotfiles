@@ -8,6 +8,7 @@ vim.g.neovide_fullscreen = true
 vim.g.neovide_padding_right = 0
 vim.g.neovide_padding_left = 0
 
+
 -- Tab / Indentation
 opt.cmdheight = 2
 opt.tabstop = 2

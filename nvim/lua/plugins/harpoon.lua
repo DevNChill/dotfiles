@@ -44,5 +44,11 @@ return {
 			":lua require('harpoon.ui').nav_file(4)<CR>",
 			{ noremap = true, silent = true }
 		)
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>5",
+			":lua require('harpoon.ui').nav_file(5)<CR>",
+			{ noremap = true, silent = true }
+		)
 	end,
 }
