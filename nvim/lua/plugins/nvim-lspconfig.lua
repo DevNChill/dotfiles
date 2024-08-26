@@ -132,21 +132,8 @@ local config = function()
 	})
 
 	-- Configure efm server
-	local htmlhint = {
-		lintCommand = "htmlhint",
-		lintStdin = true,
-		lintFormats = { "%f:%l:%c: %m" },
-	}
-	local stylelint = {
-		lintCommand = "stylelint --formatter json",
-		lintStdin = true,
-		lintFormats = { "%d: %m", "%f:%l:%c: %m" },
-		lintIgnoreExitCode = true,
-	}
-	local prettier = {
-		formatCommand = "prettier --stdin --stdin-filepath ${INPUT}",
-		formatStdin = true,
-	}
+	local stylelint = require("efmls-configs.linters.stylelint")
+	local prettier = require("efmls-configs.formatters.prettier")
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
@@ -206,7 +193,7 @@ local config = function()
 				markdown = { prettier },
 				docker = { hadolint, prettier },
 				solidity = { solhint },
-				html = { htmlhint, prettier },
+				html = { prettier },
 				css = { stylelint, prettier },
 				c = { cpplint },
 				cpp = { cpplint },

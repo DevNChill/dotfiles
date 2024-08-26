@@ -28,6 +28,8 @@ fi
 export PATH="$PATH:/home/mid3ee/.local/bin"
 #for npm
 export PATH="$PATH:/home/mid3ee/.npm-global/bin"
+#for css
+export STYLELINT_CONFIG_PATH="$HOME/.stylelintrc.json"
 #My Custom Bin
 export PATH="$HOME/.bin:$PATH"
 
