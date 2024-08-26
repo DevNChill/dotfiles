@@ -1,8 +1,7 @@
 local plugins = {
 	{
 		"rcarriga/nvim-dap-ui",
-		lazy = true,
-    cmd = { "DapContinue", "DapToggleBreakpoint", "DapStepOver", "DapStepInto", "DapStepOut", "DapTerminate", "DapREPL" },
+		lazy = false,
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")
@@ -10,7 +9,7 @@ local plugins = {
 			-- Define the LLDB adapter
 			dap.adapters.lldb = {
 				type = "executable",
-				command = "/usr/bin/lldb-vscode", -- Path to your LLDB VSCode executable
+				command = "/usr/bin/lldb-dap", -- Path to your LLDB VSCode executable
 				name = "lldb",
 			}
 

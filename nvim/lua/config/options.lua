@@ -8,7 +8,6 @@ vim.g.neovide_fullscreen = true
 vim.g.neovide_padding_right = 0
 vim.g.neovide_padding_left = 0
 
-
 -- Tab / Indentation
 opt.cmdheight = 2
 opt.tabstop = 2
@@ -51,8 +50,8 @@ opt.selection = "exclusive"
 opt.mouse = "a"
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
--- opt.guicursor =
--- 	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+opt.guicursor =
+	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 opt.encoding = "UTF-8"
 opt.showmode = false
 

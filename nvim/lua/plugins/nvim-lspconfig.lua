@@ -1,3 +1,5 @@
+-- Css is working
+
 vim.lsp.set_log_level("debug")
 local on_attach = require("util.lsp").on_attach
 local diagnostic_signs = require("util.icons").diagnostic_signs
@@ -145,6 +147,7 @@ local config = function()
 	local hadolint = require("efmls-configs.linters.hadolint")
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
+  local htmlhint = require("efmls-configs.linters.htmlhint")
 
 	lspconfig.efm.setup({
 		filetypes = {
@@ -193,7 +196,7 @@ local config = function()
 				markdown = { prettier },
 				docker = { hadolint, prettier },
 				solidity = { solhint },
-				html = { prettier },
+				html = {htmlhint, prettier },
 				css = { stylelint, prettier },
 				c = { cpplint },
 				cpp = { cpplint },
@@ -215,4 +218,3 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 }
-

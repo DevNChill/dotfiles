@@ -1,26 +1,27 @@
 local opts = {
-  ensure_installed = {
-    "html",
-    "tsserver",
-    "cssls",
-    "tailwindcss",
-    "svelte",
-    "efm",
-    "bashls",
-    "solidity",
-    "lua_ls",
-    "emmet_ls",
-    "jsonls",
-    "clangd",
-  },
-  automatic_installation = true,
+	ensure_installed = {
+		"html",
+		-- "js-debug-adapter",
+		"tsserver",
+		"cssls",
+		"tailwindcss",
+		"svelte",
+		"efm",
+		"bashls",
+		"solidity",
+		"lua_ls",
+		"emmet_ls",
+		"jsonls",
+		"clangd",
+	},
+	automatic_installation = true,
 }
 
 return {
-  "williamboman/mason-lspconfig.nvim",
-  opts = opts,
-  event = "BufReadPre",
-  dependencies = {
-    "williamboman/mason.nvim",
-  }
+	"williamboman/mason-lspconfig.nvim",
+	opts = opts,
+	event = "BufReadPre",
+	dependencies = {
+		"williamboman/mason.nvim",
+	},
 }
