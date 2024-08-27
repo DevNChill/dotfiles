@@ -17,6 +17,10 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"onsails/lspkind.nvim",
+			"L3MON4D3/LuaSnip",
+		},
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
@@ -31,16 +35,15 @@ return {
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
-					["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-					["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+					["<C-y>"] = cmp.mapping.confirm({ select = true }),
+					["<C-k>"] = cmp.mapping.select_prev_item(),
+					["<C-j>"] = cmp.mapping.select_next_item(),
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-					["<C-e>"] = cmp.mapping.abort(), -- close completion window
+					["<C-Space>"] = cmp.mapping.complete(),
+					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = false }),
 					["<C-l>"] = cmp.mapping(function(fallback)
-						-- if cmp.visible() then
-						-- 	cmp.select_next_item()
 						if luasnip.expand_or_jumpable() then
 							luasnip.expand_or_jump()
 						else
@@ -57,24 +60,23 @@ return {
 						end
 					end, { "i", "s" }),
 				}),
-				-- sources for autocompletion
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" }, -- lsp
-					{ name = "luasnip" }, -- snippets
-					{ name = "buffer" }, -- text within current buffer
-					{ name = "path" }, -- file system paths
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
+					{ name = "buffer" },
+					{ name = "path" },
 				}),
-				-- configure lspkind for vs-code like icons
 				formatting = {
 					format = lspkind.cmp_format({
+						mode = "symbol_text",
 						maxwidth = 50,
 						ellipsis_char = "...",
 					}),
 				},
+				experimental = {
+					ghost_text = true, -- Enable ghost text (virtual text) for inline suggestions
+				},
 			})
 		end,
-		dependencies = {
-			"onsails/lspkind.nvim",
-		},
 	},
 }
