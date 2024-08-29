@@ -35,10 +35,10 @@ return {
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
-					["<C-y>"] = cmp.mapping.confirm({ select = true }),
+					["<C-b>"] = cmp.mapping.confirm({ select = true }),
 					["<C-k>"] = cmp.mapping.select_prev_item(),
 					["<C-j>"] = cmp.mapping.select_next_item(),
-					["<C-b>"] = cmp.mapping.scroll_docs(-4),
+					["<C-q>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
@@ -77,6 +77,15 @@ return {
 					ghost_text = true, -- Enable ghost text (virtual text) for inline suggestions
 				},
 			})
+		end,
+	},
+	{
+		"mattn/emmet-vim",
+		event = "BufEnter",
+		config = function()
+			vim.g.user_emmet_leader_key = "<C-y>,"
+			vim.g.user_emmet_expandabbr_key = "<C-y>,"
+			vim.g.user_emmet_mode = "i"
 		end,
 	},
 }

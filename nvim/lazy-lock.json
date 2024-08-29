@@ -8,6 +8,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "codeium.vim": { "branch": "main", "commit": "8bed5fb5708c94cd69f418d1381d6fbf07cb0313" },
   "efmls-configs-nvim": { "branch": "main", "commit": "b23178bef394eac491788f525747acebaf259c05" },
+  "emmet-vim": { "branch": "master", "commit": "6c511a8d7d2863066f32e25543e2bb99d505172c" },
   "everforest-nvim": { "branch": "main", "commit": "5493fc380cf871d6ee9395f2613e57006b2a1626" },
   "friendly-snippets": { "branch": "main", "commit": "00ebcaa159e817150bd83bfe2d51fa3b3377d5c4" },
   "gitsigns.nvim": { "branch": "main", "commit": "80214a857ce512cc64964abddc1d8eb5a3e28396" },

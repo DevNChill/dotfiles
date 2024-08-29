@@ -27,7 +27,7 @@ fi
 # Created by `pipx` on 2024-05-16 08:29:05
 export PATH="$PATH:/home/mid3ee/.local/bin"
 #for npm
-export PATH="$PATH:/home/mid3ee/.npm-global/bin"
+export PATH="$PATH:/home/mid3ee/.config/.npm-global/bin"
 #for css
 export STYLELINT_CONFIG_PATH="$HOME/.stylelintrc.json"
 #My Custom Bin
