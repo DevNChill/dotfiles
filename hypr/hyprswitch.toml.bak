@@ -1,8 +1,0 @@
-ignore_monitors = false
-ignore_workspaces = false
-sort_recent = false
-filter_current_workspace = false
-filter_current_monitor = false
-filter_same_class = false
-include_special_workspaces = true
-
