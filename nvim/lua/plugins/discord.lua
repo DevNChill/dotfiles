@@ -1,7 +1,6 @@
 return {
-	"andweeb/presence.nvim",
-	event = "BufEnter",
-	config = function()
-		require("presence"):setup({})
-	end,
+	"vyfor/cord.nvim",
+	build = "./build || .\\build",
+	event = "VeryLazy",
+	opts = {}, -- calls require('cord').setup()
 }

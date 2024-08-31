@@ -15,7 +15,7 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
-opt.wrap = true
+opt.wrap = false
 
 -- Search
 opt.incsearch = true
@@ -24,7 +24,7 @@ opt.smartcase = true
 opt.hlsearch = false
 
 -- Appearance
-vim.opt.guifont = "Cascadia Code:h17"
+-- vim.opt.guifont = ":h17"
 opt.number = true
 opt.relativenumber = true
 opt.termguicolors = true
