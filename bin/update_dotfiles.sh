@@ -39,6 +39,7 @@ rsync -av --delete --exclude '.git' "$HOME/.tmux/" "$DOTFILES_DIR/tmux/"
 cp "$HOME/.myalias" "$DOTFILES_DIR/myalias"
 cp "$HOME/.tmux.conf" "$DOTFILES_DIR/tmux.conf"
 cp "$HOME/.zshrc" "$DOTFILES_DIR/zshrc"
+cp "$HOME/.stylelintrc.json" "$DOTFILES_DIR/stylelintrc.json"
 
 # Navigate to the repository directory
 cd "$DOTFILES_DIR"
@@ -54,4 +55,3 @@ git commit -m "$commit_message"
 
 # Push the changes
 git push origin main
-

@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "no-duplicate-selectors": true,
+    "no-invalid-position-at-import-rule": true,
+    "color-function-notation": null,
+    "rule-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null
+  }
+}
+
