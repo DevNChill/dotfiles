@@ -1,7 +1,54 @@
+//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
 /* Waybar Modules */
-//Everforest themed
 
 {
+
+// Weather and Temperature Modules as this is most like to change always. 
+// Result is of course easier to edit
+"custom/weather": {
+	"format": "{}",
+	"format-alt": "{alt}: {}",
+	"format-alt-click": "click",
+	"interval": 3600,
+	"return-type": "json",
+	"exec": "~/.config/hypr/UserScripts/Weather.sh",
+	//"exec": "~/.config/hypr/UserScripts/Weather.py",
+	"exec-if": "ping wttr.in -c1",
+	"tooltip": true,
+},
+"temperature": {
+	"interval": 10,
+	"tooltip": true,
+	"hwmon-path": [
+		"/sys/class/hwmon/hwmon1/temp1_input",
+		"/sys/class/thermal/thermal_zone0/temp"
+	],
+	//"thermal-zone": 0,
+	"critical-threshold": 82,
+	"format-critical": "{temperatureC}°C {icon}",
+	"format": "{temperatureC}°C {icon}",
+	"format-icons": [
+		"󰈸"
+	],
+	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+},
+"temperature#vertical": {
+	"interval": 10,
+	"tooltip": true,
+	"hwmon-path": [
+		"/sys/class/hwmon/hwmon1/temp1_input",
+		"/sys/class/thermal/thermal_zone0/temp"
+	],
+	//"thermal-zone": 0,
+	"critical-threshold": 80,
+	"format-critical": "{icon}\n{temperatureC}°C",
+	"format": " {icon}",
+	"format-icons": [
+		"󰈸"
+	],
+	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+},
+
 // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
 // CIRCLES Style
 "hyprland/workspaces": {
@@ -147,20 +194,22 @@
 		"title<.*reddit.*>": " ",
 		"title<.*Picture-in-Picture.*>": " ",
 		"class<firefox>": " ",
-		"class<kitty>": "<span font='12'> </span>",
+		"class<kitty>": " ",
+		"class<kitty-dropterm>": " ",
+		"class<konsole>": " ",
 		"class<Chromium>": "<span font='12'> </span>",
 		"class<org.telegram.desktop|io.github.tdesktop_x64.TDeskto>": "<span font='12'> </span>",
 		"class<[Ss]potify>": "<span font='12'> </span>",
 		"class<VSCode|code-url-handler>": "<span font='12'>󰨞</span>",
-		"class<konsole>": " ",
 		"class<thunar>": "󰝰 ",
-		"class<discord>": "<span font='12'>  </span>",
+		"class<discord>": " ",
 		"class<WebCord>": " ",
 		"class<subl>": "󰅳 ",
 		"class<celluloid>": " ",
 		"class<Cider>": "󰎆 ",
+		"class<virt-manager>": " ",
 		"class<code-oss>": "󰨞 ",
-		"class<codium|codium-url-handler|VSCodium>": "<span font='12'>󰨞</span> ",
+		"class<codium|codium-url-handler|VSCodium>": "󰨞 ",
 		"class<codeblocks>": "󰅩 ",
 		"class<mousepad>": " ",
 		"class<libreoffice-writer>": " ",
@@ -296,12 +345,12 @@
 		"warning": 30,
 		"critical": 15
 	},
-	"format": "Battery {icon}  {capacity}%",
-	"format-charging": "Battery  {capacity}%",
-	"format-plugged": "Battery 󱘖 {capacity}%",
+	"format": "{icon} {capacity}%",
+	"format-charging": " {capacity}%",
+	"format-plugged": "󱘖 {capacity}%",
 	"format-alt-click": "click",
-	"format-full": "Battery {icon} Full",
-	"format-alt": "Battery {icon} {time}",
+	"format-full": "{icon} Full",
+	"format-alt": "{icon} {time}",
 	"format-icons": [
 		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
 	],
@@ -323,8 +372,8 @@
 },
 "clock": {
 	"interval": 1,
-    "format": " {:%I:%M %p}", // AM PM format
-    //"format": " {:%H:%M:%S}", // 24H
+    //"format": " {:%I:%M %p}", // AM PM format
+    "format": " {:%H:%M:%S}", // 24H
 	"format-alt": " {:%H:%M   %Y, %d %B, %A}",
 	"tooltip-format": "<tt><small>{calendar}</small></tt>",
 	"calendar": {
@@ -349,30 +398,30 @@
 	"on-scroll-down": "shift_down"
 },
 "clock#2": {
-    "format": " {:%I:%M %p}", // AM PM format
-    //"format": "  {:%H:%M}", // 24H
+    //"format": " {:%I:%M %p}", // AM PM format
+    "format": "  {:%H:%M}", // 24H
     "format-alt": "{:%A  |  %H:%M  |  %e %B}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 },
 "clock#3": {
-    "format": "{:%I:%M %p - %d/%b}", //for AM/PM
-    //"format": "{:%H:%M - %d/%b}", // 24H
+    //"format": "{:%I:%M %p - %d/%b}", //for AM/PM
+    "format": "{:%H:%M - %d/%b}", // 24H
 	"tooltip": false
 },
 "clock#4": {
 	"interval": 60,
-    "format": "{:%B | %a %d, %Y | %I:%M %p}", // AM PM format
-    //"format": "{:%B | %a %d, %Y | %H:%M}", // 24H
+    //"format": "{:%B | %a %d, %Y | %I:%M %p}", // AM PM format
+    "format": "{:%B | %a %d, %Y | %H:%M}", // 24H
 	"format-alt": "{:%a %b %d, %G}",
 	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 },
 "clock#5": {
-    "format": "{:%A, %I:%M %P}", // AM PM format
-    //"format": "{:%a %d | %H:%M}", // 24H
+    //"format": "{:%A, %I:%M %P}", // AM PM format
+    "format": "{:%a %d | %H:%M}", // 24H
 	"format-alt": "{:%A, %d %B, %Y (%R)}"
 },
 "cpu": {
-	"format": "Cpu  󰍛  {usage}%",
+	"format": "{usage}% 󰍛",
 	"interval": 1,
 	"min-length": 5,
 	"format-alt-click": "click",
@@ -384,13 +433,12 @@
 },
 "disk": {
 	"interval": 30,
-	//"format": "Disk    󰋊",
+	//"format": "󰋊",
 	"path": "/",
 	//"format-alt-click": "click",
-	"format": "Disk 󰋊  {used}",
-  "on-click-right": "baobab",
-//	"tooltip": true,
-//	"tooltip-format": "Disk    {used} used out of {total} on {path} ({percentage_used}%)",
+	"format": "{percentage_used}% 󰋊",
+	//"tooltip": true,
+	"tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
 },
 "hyprland/language": {
 	"format": "Lang: {}",
@@ -437,11 +485,11 @@
 },
 "memory": {
 	"interval": 10,
-	"format": "Ram  󰾆  {used:0.1f}G",
-	"format-alt": "Ram    {percentage}%    󰾆",
+	"format": "{used:0.1f}G 󰾆",
+	"format-alt": "{percentage}% 󰾆",
 	"format-alt-click": "click",
 	"tooltip": true,
-	"tooltip-format": "Ram    {used:0.1f}GB/{total:0.1f}G",
+	"tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
 	"on-click-right": "kitty --title btop sh -c 'btop'"
 },
 "mpris": {
@@ -462,7 +510,7 @@
 		"kdeconnect": "",
 		"mopidy": "",
 		"mpv": "󰐹",
-		"spotify": "󰓇",
+		"spotify": "",
 		"vlc": "󰕼",
 	},
 	"status-icons": {
@@ -573,22 +621,6 @@
 	"tooltip-format": "{source_desc} | {source_volume}%",
 	"scroll-step": 5,
 },
-"temperature": {
-	"interval": 10,
-	"tooltip": true,
-	"hwmon-path": [
-		"/sys/class/hwmon/hwmon1/temp1_input",
-		"/sys/class/thermal/thermal_zone0/temp"
-	],
-	//"thermal-zone": 0,
-	"critical-threshold": 82,
-	"format-critical": "Temp {icon}  {temperatureC}°C",
-	"format": "Temp {icon}  {temperatureC}°C",
-	"format-icons": [
-		" 󰈸"
-	],
-	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
-},
 "tray": {
 	"icon-size": 18,
 	"spacing": 4,
@@ -614,7 +646,8 @@
 	"ignore-list": [
 		"wofi",
 		"rofi",
-		"kitty"
+		"kitty",
+    "kitty-dropterm"
 		],
 },
 "custom/cycle_wall": {
@@ -712,21 +745,11 @@
 	"exec": "checkupdates | wc -l",
 	"exec-if": "[[ $(checkupdates | wc -l) ]]",
 	"interval": 15,
-	"on-click": "kitty -T update paru -Syu || yay -Syu && notify-send 'The system has been updated'",
+	"on-click": "if command -v paru &> /dev/null; then kitty -T update paru -Syu; else kitty -T update yay -Syu; fi && notify-send 'The system has been updated'",
 	"tooltip": true,
 	"tooltip-format": "Left Click: Update System\nArch Linux Only",
 },
-"custom/weather": {
-	"format": "{}",
-	"format-alt": "{alt}: {}",
-	"format-alt-click": "click",
-	"interval": 3600,
-	"return-type": "json",
-	"exec": "~/.config/hypr/UserScripts/Weather.sh",
-	//"exec": "~/.config/hypr/UserScripts/Weather.py",
-	"exec-if": "ping wttr.in -c1",
-	"tooltip": true,
-},
+
 // Separators
 "custom/separator#dot": {
 	"format": "",
@@ -844,22 +867,6 @@
 	"tooltip": true,
 	"tooltip-format": "{source_desc} | {source_volume}%",
 },
-"temperature#vertical": {
-	"interval": 10,
-	"tooltip": true,
-	"hwmon-path": [
-		"/sys/class/hwmon/hwmon1/temp1_input",
-		"/sys/class/thermal/thermal_zone0/temp"
-	],
-	//"thermal-zone": 0,
-	"critical-threshold": 80,
-	"format-critical": "{icon}\n{temperatureC}°C",
-	"format": " {icon}",
-	"format-icons": [
-		"󰈸"
-	],
-	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
-},
 "custom/power_vertical": {
 	"format": "⏻",
 	"exec": "echo ; echo 󰟡 power // blur",
@@ -869,4 +876,3 @@
 	"tooltip": true,
 },
 }
-

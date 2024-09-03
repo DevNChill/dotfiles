@@ -47,12 +47,12 @@ local keys = {
     { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
     { "<leader>fl", "<cmd>Telescope lsp_references<cr>", desc = "Lsp References" },
     { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Old files" },
-    { "<leader>fgg", "<cmd>Telescope live_grep<cr>", desc = "Ripgrep" },
+    { "<leader>fdg", "<cmd>Telescope live_grep<cr>", desc = "Ripgrep" },
     { "<leader>fgs", "<cmd>Telescope grep_string<cr>", desc = "Grep String" },
     { "<leader>ft", "<cmd>Telescope treesitter<cr>", desc = "Treesitter" },
 
     -- New keybindings with lazy loading
-    { "<leader>fg", function() require('telescope.builtin').live_grep({ cwd = vim.fn.getcwd() }) end, desc = "Ripgrep in Current Directory" },
+    { "<leader>fr", function() require('telescope.builtin').live_grep({ cwd = vim.fn.getcwd() }) end, desc = "Ripgrep in Current Directory" },
     { "<leader>fs", function() require('telescope.builtin').grep_string({ cwd = vim.fn.getcwd() }) end, desc = "String Search in Current Directory" },
     { "<leader>ff", function() require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Find Files in Parent Directory" },
 }

@@ -13,6 +13,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
+-- Set filetype for .conf files
+vim.cmd([[
+  augroup conf_files
+    autocmd!
+    autocmd BufRead,BufNewFile *.conf set filetype=sh
+  augroup END
+]])
+
 -- highlight on yank
 local highlight_yank_group = vim.api.nvim_create_augroup("HighlightYankGroup", {})
 vim.api.nvim_create_autocmd("TextYankPost", {
