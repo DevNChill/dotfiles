@@ -2,13 +2,14 @@
 
 # Check if inside a tmux session
 if [ -z "$TMUX" ]; then
-  echo "You need to be inside a tmux session to run this script."
-  exit 1
+	echo "You need to be inside a tmux session to run this script."
+	exit 1
 fi
 
 # Create a new window for live-server
 tmux new-window -n live_server
-tmux send-keys -t live_server "cd $(pwd) && live-server" C-m
+tmux send-keys -t live_server "cd $(pwd) && live-server --browser="chromium"
+" C-m
 
 # Create a new window for nvim
 tmux new-window -n nvim

@@ -2,8 +2,9 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "block-no-empty": true,
+    "font-family-name-quotes": null,
     "color-no-invalid-hex": true,
-    "no-duplicate-selectors": true,
+    "no-duplicate-selectors": false,
     "no-invalid-position-at-import-rule": true,
     "color-function-notation": null,
     "rule-empty-line-before": null,

@@ -51,7 +51,7 @@ window#waybar {
 }
 
 window#waybar.hidden {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 #window {
@@ -81,7 +81,7 @@ window#waybar.empty #window {
 #custom-menu,
 #custom-arch {
   background-color: @bg;
-  color: @red;
+  color: @purple;
 }
 
 #custom-swaync {
@@ -98,7 +98,7 @@ window#waybar.empty #window {
   background-color: @grey0;
   color: @black;
   animation: gradient_f 20s ease-in infinite;
-  /*transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);*/
+  /*transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);*/
 }
 
 #taskbar button:hover,
@@ -240,47 +240,47 @@ window#waybar.empty #window {
 }
 
 #pulseaudio-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
-	
+
 #pulseaudio-slider trough {
-	min-width: 80px;  
-	min-height: 5px; 
-	border-radius: 5px;
-	background-color: #22252a;
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+  background-color: #22252a;
 }
-	
+
 #pulseaudio-slider highlight {
-	min-height: 10px; 
-	border-radius: 5px;
-	background-color: #ba5663;
+  min-height: 10px;
+  border-radius: 5px;
+  background-color: #ba5663;
 }
 
 #backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
-	
+
 #backlight-slider trough {
-	min-width: 80px;  
-	min-height: 10px; 
-	border-radius: 5px;
-	background-color: #22252a;
+  min-width: 80px;
+  min-height: 10px;
+  border-radius: 5px;
+  background-color: #22252a;
 }
-	
+
 #backlight-slider highlight {
-	min-width: 10px; 
-	border-radius: 5px;
-	background-color: #ba5663;
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: #ba5663;
 }
 
 #backlight,
@@ -320,13 +320,13 @@ window#waybar.empty #window {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-	padding-right: 5px;
-	padding-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }

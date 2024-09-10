@@ -1,7 +1,7 @@
 return {
 	{
 		"Exafunction/codeium.vim",
-		event = "BufEnter",
+		-- event = "BufEnter",
 	},
 	-- {
 	-- 	"robitx/gp.nvim",
