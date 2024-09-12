@@ -5,6 +5,7 @@ if [[ -z "$NO_FASTFETCH" ]]; then
 fi
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
+export VISUAL=nvim
 ZSH_THEME="robbyrussell"
 
 plugins=( 
