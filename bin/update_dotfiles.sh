@@ -34,12 +34,13 @@ rsync -av --delete --exclude '.git' "$HOME/.config/waybar/" "$DOTFILES_DIR/wayba
 rsync -av --delete --exclude '.git' "$HOME/.oh-my-zsh/" "$DOTFILES_DIR/oh-my-zsh/"
 rsync -av --delete --exclude '.git' "$HOME/.config/spicetify/" "$DOTFILES_DIR/spicetify/"
 rsync -av --delete --exclude '.git' "$HOME/.tmux/" "$DOTFILES_DIR/tmux/"
+rsync -av --delete --exclude '.git' "$HOME/.config/VSCodium/User/keybindings.json" "$DOTFILES_DIR/keybindings.json"
 
 # Copy individual files
 cp "$HOME/.myalias" "$DOTFILES_DIR/myalias"
+cp "$HOME/.config/VSCodium/User/keybindings.json" "$DOTFILES_DIR/keybindings.json"
 cp "$HOME/.tmux.conf" "$DOTFILES_DIR/tmux.conf"
 cp "$HOME/.zshrc" "$DOTFILES_DIR/zshrc"
-cp "$HOME/.stylelintrc.json" "$DOTFILES_DIR/stylelintrc.json"
 
 # Navigate to the repository directory
 cd "$DOTFILES_DIR"
