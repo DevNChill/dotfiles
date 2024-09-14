@@ -25,7 +25,6 @@ mkdir -p "$DOTFILES_DIR/swaync"
 
 # Sync changes using rsync
 rsync -av --delete --exclude '.git' "$HOME/.config/fastfetch/" "$DOTFILES_DIR/fastfetch/"
-rsync -av --delete --exclude '.git' "$HOME/.config/VSCodium/User/keybindings.json" "$DOTFILES_DIR/keybindings.json/"
 rsync -av --delete --exclude '.git' "$HOME/.config/cava/" "$DOTFILES_DIR/cava/"
 rsync -av --delete --exclude '.git' "$HOME/.bin/" "$DOTFILES_DIR/bin/"
 rsync -av --delete --exclude '.git' "$HOME/.config/hypr/" "$DOTFILES_DIR/hypr/"
@@ -39,6 +38,7 @@ rsync -av --delete --exclude '.git' "$HOME/.tmux/" "$DOTFILES_DIR/tmux/"
 
 # Copy individual files
 cp "$HOME/.myalias" "$DOTFILES_DIR/myalias"
+cp "$HOME/.config/VSCodium/Users/Keybindings.json" "$DOTFILES_DIR/keybindings.json"
 cp "$HOME/.tmux.conf" "$DOTFILES_DIR/tmux.conf"
 cp "$HOME/.zshrc" "$DOTFILES_DIR/zshrc"
 
