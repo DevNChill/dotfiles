@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "Everforest Dark",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.lineNumbers": "relative",
+  "workbench.startupEditor": "none",
+    "editor.fontFamily": "Victor Mono Nerd Font, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14, // Optional: Adjust the font size if needed
+    "editor.fontLigatures": true,
+    "liveServer.settings.donotShowInfoMsg": true // Optional: Enable font ligatures if Victor Mono supports them
+  }
+
