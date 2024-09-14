@@ -37,7 +37,7 @@ rsync -av --delete --exclude '.git' "$HOME/.tmux/" "$DOTFILES_DIR/tmux/"
 
 # Copy individual files
 cp "$HOME/.myalias" "$DOTFILES_DIR/myalias"
-cp "$HOME/.config/VSCodium/Users/Keybindings.json" "$DOTFILES_DIR/keybindings.json"
+cp "$HOME/.config/VSCodium/User/Keybindings.json" "$DOTFILES_DIR/keybindings.json"
 cp "$HOME/.tmux.conf" "$DOTFILES_DIR/tmux.conf"
 cp "$HOME/.zshrc" "$DOTFILES_DIR/zshrc"
 
