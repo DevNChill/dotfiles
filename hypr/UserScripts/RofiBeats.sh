@@ -37,7 +37,7 @@ populate_local_music() {
 
 # Function for displaying notifications
 notification() {
-	notify-send -u normal -i "$iDIR/music.png" 
+	notify-send -u normal -i "$iDIR/music.png"
 }
 
 # Main function for playing local music

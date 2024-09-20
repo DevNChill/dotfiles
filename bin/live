@@ -8,7 +8,7 @@ fi
 
 # Create a new window for live-server
 tmux new-window -n live_server
-tmux send-keys -t live_server "cd $(pwd) && live-server --browser="chromium"
+tmux send-keys -t live_server "cd $(pwd) && live-server --browser="chrome"
 " C-m
 
 # Create a new window for nvim
