@@ -7,7 +7,7 @@ set -e
 set -x
 
 # Paths
-DOTFILES_DIR="$HOME/repos/Github/dotfiles"
+DOTFILES_DIR="/home/mid3ee/Desktop/CodeHaven/repos/dotfiles"
 
 # Ensure all directories exist in the dotfiles repo
 mkdir -p "$DOTFILES_DIR/fastfetch"
@@ -36,6 +36,7 @@ rsync -av --delete --exclude '.git' "$HOME/.config/spicetify/" "$DOTFILES_DIR/sp
 rsync -av --delete --exclude '.git' "$HOME/.tmux/" "$DOTFILES_DIR/tmux/"
 rsync -av --delete --exclude '.git' "$HOME/.config/VSCodium/User/keybindings.json" "$DOTFILES_DIR/keybindings.json"
 rsync -av --delete --exclude '.git' "$HOME/.config/VSCodium/User/settings.json" "$DOTFILES_DIR/settings.json"
+rsync -av --delete --exclude '.git' "$HOME/Desktop/CodeHaven/repos/dotfiles/update_dotfiles.sh" "$DOTFILES_DIR/update_dotfiles.sh"
 
 # Copy individual files
 cp "$HOME/.myalias" "$DOTFILES_DIR/myalias"
