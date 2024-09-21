@@ -25,7 +25,7 @@ mkdir -p "$DOTFILES_DIR/swaync"
 # Sync changes using rsync
 rsync -av --delete --exclude '.git' "$HOME/.config/fastfetch/" "$DOTFILES_DIR/fastfetch/"
 rsync -av --delete --exclude '.git' "$HOME/.config/cava/" "$DOTFILES_DIR/cava/"
-rsync -av --delete --exclude '.git' "$HOME/.bin/" "$DOTFILES_DIR/bin/"
+rsync -av --delete --exclude '.git' "$HOME/.local/bin/" "$DOTFILES_DIR/bin/"
 rsync -av --delete --exclude '.git' "$HOME/.config/hypr/" "$DOTFILES_DIR/hypr/"
 rsync -av --delete --exclude '.git' "$HOME/.config/swaync/" "$DOTFILES_DIR/swaync/"
 rsync -av --delete --exclude '.git' "$HOME/.config/kitty/" "$DOTFILES_DIR/kitty/"

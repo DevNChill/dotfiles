@@ -123,6 +123,14 @@ vim.api.nvim_set_keymap("n", "<leader>j", ":m .+1<cr>==", { noremap = true, sile
 -- move line up in normal mode
 vim.api.nvim_set_keymap("n", "<leader>k", ":m .-2<cr>==", { noremap = true, silent = true })
 
+-- Keymap for starting/stopping live-server
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>ls",
+	":!~/.local/bin/toggle-live-server.sh<CR>",
+	{ noremap = true, silent = true }
+)
+
 -- move blocks up and down and also indent
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<cr>gv=gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<cr>gv=gv", { noremap = true, silent = true })

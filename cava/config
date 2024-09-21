@@ -12,4 +12,4 @@ gravity = 125
 
 [color]
 background = default
-foreground = '#A7C080'
+#foreground = '#cdd6f4'

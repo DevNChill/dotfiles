@@ -47,7 +47,7 @@ local opts = {
 require("lazy").setup(plugins, opts)
 
 -- Set the default colorscheme
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme catppuccin")
 
 -- Set highlight for comments to soft blue
 vim.api.nvim_set_hl(0, "Comment", { fg = "#a89984", italic = true })
