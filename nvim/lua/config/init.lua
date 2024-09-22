@@ -15,10 +15,7 @@ require("config.globals")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
-require("config.runcompetive")
 require("config.theme_toggle")
-require("config.runc")
-require("config.runcpp")
 require("config.helpers")
 local plugins = "plugins"
 
