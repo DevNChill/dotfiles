@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("config.globals")
+require("config.runpython")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
@@ -20,6 +21,7 @@ require("config.theme_toggle")
 require("config.runc")
 require("config.runcpp")
 require("config.helpers")
+require("config.runjs")
 local plugins = "plugins"
 
 local opts = {
