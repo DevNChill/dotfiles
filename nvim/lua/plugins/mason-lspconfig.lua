@@ -2,6 +2,7 @@ local opts = {
 	ensure_installed = {
 		"html",
 		-- "js-debug-adapter",
+		"tsserver",
 		"cssls",
 		"tailwindcss",
 		"svelte",

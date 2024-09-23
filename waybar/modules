@@ -199,7 +199,6 @@
 		"class<kitty-dropterm>": " ",
 		"class<konsole>": " ",
 		"class<Chromium>": "<span> </span>",
-		"class<google-chrome>": "<span> </span>",
 		"class<org.telegram.desktop|io.github.tdesktop_x64.TDeskto>": "<span font='12'> </span>",
 		"class<[Ss]potify>": "<span ></span>",
 		"class<VSCode|code-url-handler>": "<span>󰨞 </span>",
