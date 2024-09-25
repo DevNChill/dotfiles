@@ -16,6 +16,6 @@ if [ -f "$PIDFILE" ]; then
 	fi
 else
 	echo "Starting live-server..."
-	nohup live-server --browser="google-chrome" >/dev/null 2>&1 &
+	nohup live-server --browser="google-chrome-unstable" >/dev/null 2>&1 &
 	echo $! >"$PIDFILE"
 fi
