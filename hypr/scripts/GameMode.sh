@@ -17,7 +17,6 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         keyword decoration:rounding 0"
 
 	hyprctl keyword "windowrule opacity 1 override 1 override 1 override, ^(.*)$"
-	# swww kill
 	notify-send -e -u low -i "$notif" "gamemode enabled. All animations off"
 	exit
 else

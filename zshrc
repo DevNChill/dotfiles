@@ -1,8 +1,8 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -z "$NO_FASTFETCH" ]]; then
-    fastfetch
-fi
+# if [[ -z "$NO_FASTFETCH" ]]; then
+#     fastfetch
+# fi
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
 export VISUAL=nvim

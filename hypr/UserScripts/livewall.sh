@@ -5,7 +5,7 @@ exec >>~/script_log.txt 2>&1
 echo "Script run at: $(date)"
 
 # Define paths for the default wallpaper and the video
-DEFAULT_WALLPAPER="$HOME/Pictures/wallpapers/Lowpoly_Street.png"
+DEFAULT_WALLPAPER="$HOME/.config/rofi/.current_wallpaper"
 VIDEO_PATH="$HOME/Videos/livewallpaper/catgirl.mp4"
 
 # Function to restore the wallpaper

@@ -14,13 +14,18 @@ return {
 		version = false,
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			require("everforest").setup({
-			})
+			require("everforest").setup({})
 		end,
 	},
 	-- Lazy
 	{
 		"olimorris/onedarkpro.nvim",
 		priority = 1000, -- Ensure it loads first
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
 }

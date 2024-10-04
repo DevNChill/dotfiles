@@ -147,7 +147,7 @@ local config = function()
 	local hadolint = require("efmls-configs.linters.hadolint")
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
-  local htmlhint = require("efmls-configs.linters.htmlhint")
+	-- local htmlhint = require("efmls-configs.linters.htmlhint")
 
 	lspconfig.efm.setup({
 		filetypes = {
@@ -196,7 +196,15 @@ local config = function()
 				markdown = { prettier },
 				docker = { hadolint, prettier },
 				solidity = { solhint },
-				html = {htmlhint, prettier },
+				html = {
+					prettier,
+					{
+						lintCommand = "htmlhint --format unix",
+						lintStdin = true,
+						lintFormats = { "%f:%l:%c: %m" },
+						rootMarkers = { ".htmlhintrc" },
+					},
+				},
 				css = { stylelint, prettier },
 				c = { cpplint },
 				cpp = { cpplint },

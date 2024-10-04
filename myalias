@@ -5,3 +5,4 @@ alias v='nvim'
 alias ..='cd ..'
 alias ../..='cd ../..'
 alias sup='sudo pacman -Syu'
+alias lg="lazygit"

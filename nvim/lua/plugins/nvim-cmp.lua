@@ -83,9 +83,15 @@ return {
 		"mattn/emmet-vim",
 		event = "BufEnter",
 		config = function()
-			vim.g.user_emmet_leader_key = "<C-y>,"
-			vim.g.user_emmet_expandabbr_key = "<C-y>,"
-			vim.g.user_emmet_mode = "i"
-		end,
+    -- Unmap the default <C-y> keybinding for Emmet
+    vim.api.nvim_del_keymap('i', '<C-y>,')  -- Remove default <C-y>, binding
+
+    -- Set leader key for Emmet (if needed for other emmet commands)
+    vim.g.user_emmet_leader_key = "<C-e>"
+    vim.g.user_emmet_mode = "i"
+
+    -- Explicitly map <C-e> to expand Emmet abbreviation
+    vim.api.nvim_set_keymap('i', '<C-e>', '<Plug>(emmet-expand-abbr)', { noremap = true, silent = true })
+  end,
 	},
 }
