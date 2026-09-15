@@ -17,7 +17,6 @@
     file
     fzf
     gh
-    git-crypt
     git-lfs
     jq
     kitty
