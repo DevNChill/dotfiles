@@ -32,17 +32,12 @@ window-rule{
 }
 
 window-rule{
-  match app-id="spotify" 
-  open-on-workspace "music"
-}
-
-window-rule{
   match app-id="vesktop" 
   open-on-workspace "chat"
 }
 
 window-rule{
-  match app-id="^(kitty|spotify|vesktop|brave-browser)$"
+  match app-id="^(kitty|vesktop|brave-browser)$"
   open-maximized true
   open-focused true
 }
@@ -151,7 +146,6 @@ binds {
     Alt+Shift+Z { spawn "brave" "--window-name=coding" "--profile-directory=Default"; }
     Alt+Shift+C { spawn "brave" "--window-name=study" "--profile-directory=Profile 2"; }
     Alt+Shift+B { spawn "brave" "--window-name=fun" "--profile-directory=Profile 3"; }
-    Alt+Shift+S {spawn "spotify";}
     Mod+D hotkey-overlay-title="Open rofi" { spawn-sh "rofi -show drun"; }
 	Mod+T {spawn "thunar";}
     Mod+Ctrl+F {maximize-window-to-edges;}
