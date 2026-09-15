@@ -14,7 +14,32 @@ in
     withPython3 = false;
     plugins = with pkgs.vimPlugins; [
       lz-n
-      nvim-treesitter.withAllGrammars
+      (nvim-treesitter.withPlugins (parsers: [
+        parsers.bash
+        parsers.bibtex
+        parsers.c
+        parsers.cpp
+        parsers.go
+        parsers.gomod
+        parsers.gosum
+        parsers.haskell
+        parsers.hcl
+        parsers.java
+        parsers.javascript
+        parsers.json
+        parsers.latex
+        parsers.lua
+        parsers.make
+        parsers.nix
+        parsers.python
+        parsers.rust
+        parsers.terraform
+        parsers.toml
+        parsers.tsx
+        parsers.typescript
+        parsers.yaml
+        parsers.zsh
+      ]))
       nvim-treesitter-textobjects
       gruvbox-material-nvim
       which-key-nvim
